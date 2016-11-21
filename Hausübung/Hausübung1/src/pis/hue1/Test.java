@@ -1,0 +1,32 @@
+package pis.hue1;
+
+import javax.swing.SwingUtilities;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		 SwingUtilities.invokeLater (new Runnable()
+	      {
+	         public void run()
+	         {
+	        	 CodecGUI.createGUI();
+	         }
+	      });
+		
+		Wuerfel w1 = new Wuerfel();
+		Wuerfel w2 = new Wuerfel();
+		
+		//Scanner scan = new Scanner(System.in);
+		
+		w1.setzeLosung("Schwarzwald");
+		//w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt");
+		w2.setzeLosung("Schwenningen");
+		w2.kodiere(w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt"));
+		
+		w2.dekodiere("ndeeelmtsvtrngieedffprugnennsefiteereertoarutn");
+	}
+
+}
+
+

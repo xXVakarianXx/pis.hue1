@@ -1,0 +1,13 @@
+package pis.hue1;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Wuerfel w1 = new Wuerfel();
+		
+		w1.setzeLosung("hallo");
+
+	}
+
+}

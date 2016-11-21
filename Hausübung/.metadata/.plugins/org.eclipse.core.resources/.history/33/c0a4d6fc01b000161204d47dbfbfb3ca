@@ -1,0 +1,50 @@
+package pis.hue1;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class CodecGUI extends JFrame {
+	
+	public CodecGUI() {
+		JFrame fenster = new JFrame();
+		
+		fenster.setTitle("Doppelwuerfel");
+		
+		fenster.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
+		fenster.setLayout(new GridBagLayout());
+		
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill =  GridBagConstraints.NONE;
+		
+		JTextArea losung1 = new JTextArea();
+		losung1.setLineWrap(false);
+		losung1.setFont(new Font("Impact", Font.PLAIN, 12));
+		
+		JTextArea losung2 = new JTextArea();
+		losung2.setLineWrap(false);
+		losung2.setFont(new Font("Impact", Font.PLAIN, 12));
+		
+		JTextArea klartext = new JTextArea();
+		klartext.setLineWrap(false);
+		klartext.setFont(new Font("Impact", Font.PLAIN, 12));
+		
+		JTextArea geheimtext = new JTextArea();
+		geheimtext.setLineWrap(false);
+		geheimtext.setFont(new Font("Impact", Font.PLAIN, 12));
+		
+		JPanel buttonPanel = new JPanel (new FlowLayout (FlowLayout.RIGHT));
+		
+		JButton button = new JButton ("Kodiere");
+		buttonPanel.add (button);
+		
+		button = new JButton ("Dekodiere");
+		buttonPanel.add(button);
+		
+		button = new JButton ("Schließen");
+		buttonPanel.add (button);
+	}
+	
+	
+}
+

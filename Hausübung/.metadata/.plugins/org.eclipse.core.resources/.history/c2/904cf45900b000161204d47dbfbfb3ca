@@ -1,0 +1,36 @@
+
+package pis.hue1;
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		CodecGUI fenster = new CodecGUI();
+		
+		fenster.setTitle("Doppelwuerfel");
+		fenster.setSize(500, 700);
+		fenster.setVisible(true);
+		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+		Wuerfel w1 = new Wuerfel();
+		Wuerfel w2 = new Wuerfel();
+		
+		Scanner scan = new Scanner(System.in);
+		
+		w1.setzeLosung("Schwarzwald");
+		//w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt");
+		w2.setzeLosung("Schwenningen");
+		w2.kodiere(w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt"));
+		
+		w2.dekodiere("ndeeelmtsvtrngieedffprugnennsefiteereertoarutn");
+	}
+
+}
+
+
