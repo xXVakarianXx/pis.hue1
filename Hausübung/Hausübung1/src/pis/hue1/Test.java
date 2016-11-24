@@ -6,27 +6,18 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		Wuerfel w1 = new Wuerfel();
+		Wuerfel w2 = new Wuerfel();
+		
+		CodecGUI GUI = new CodecGUI(w1, w2);
+		
 		 SwingUtilities.invokeLater (new Runnable()
 	      {
 	         public void run()
 	         {
-	        	 CodecGUI.createGUI();
+	        	GUI.createGUI();
 	         }
 	      });
-		
-		Wuerfel w1 = new Wuerfel();
-		Wuerfel w2 = new Wuerfel();
-		
-		//Scanner scan = new Scanner(System.in);
-		
-		w1.setzeLosung("Schwarzwald");
-		//w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt");
-		w2.setzeLosung("Schwenningen");
-		w2.kodiere(w1.kodiere("eintreffendersendungverspaetetneuerterminfolgt"));
-		
-		w2.dekodiere("ndeeelmtsvtrngieedffprugnennsefiteereertoarutn");
 	}
 
 }
-
-

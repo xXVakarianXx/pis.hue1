@@ -19,7 +19,6 @@ public class Wuerfel implements Codec {
 	public String kodiere(String klartext) {
 		
 		StringBuffer verschluesselt = new StringBuffer();
-		int zeilen = (klartext.length()/losungZahlen.size()) +1;
 		int stelle = 0;
 		int zahler = 0;
 		
@@ -50,25 +49,11 @@ public class Wuerfel implements Codec {
 	public String dekodiere(String geheimtext) {
 		
 		String verschluesselt = geheimtext;
-		String entschluesselt = "";
-		int stelle = 0;
-		int zahler = 0;
-		
-		while(stelle < losungZahlen.size()) {
-			
-			if(losungZahlen.get(stelle) == zahler) {
-				
-				
-				
-				
-			}
-			
-			
-		}
+		StringBuffer entschluesselt = new StringBuffer(geheimtext);
 		
 		
+		return entschluesselt.toString();
 		
-		return entschluesselt;
 	}
 
 
