@@ -52,6 +52,8 @@ public class Wuerfel implements Codec {
 		StringBuffer entschluesselt = new StringBuffer(geheimtext);
 		
 		
+		
+		
 		return entschluesselt.toString();
 		
 	}
@@ -66,9 +68,15 @@ public class Wuerfel implements Codec {
 	public void setzeLosung(String schluessel) throws IllegalArgumentException {
 		
 		schluessel = schluessel.toLowerCase();
+		losungZahlen.clear();
 		
-		char[] buchstaben ={'a', 'b', 'c', 'd','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+		char[] buchstaben ={'a', 'b', 'c', 'd','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9',' ','.','!','?'};
 		int zahler = 0;
+		
+		if(schluessel.length() < 4) {
+			throw new IllegalArgumentException();
+		}
+			
 		
 		for(int i=0; i < schluessel.length(); i++) {
 			losungZahlen.add(0);
