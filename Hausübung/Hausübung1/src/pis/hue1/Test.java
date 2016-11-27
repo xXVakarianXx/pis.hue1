@@ -6,8 +6,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Wuerfel w1 = new Wuerfel();
-		Wuerfel w2 = new Wuerfel();
+		Wuerfel w1 = new Wuerfel(4);
+		Wuerfel w2 = new Wuerfel(4);
 		
 		CodecGUI GUI = new CodecGUI(w1, w2);
 		
